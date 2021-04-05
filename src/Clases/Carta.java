@@ -26,7 +26,7 @@ public class Carta {
     
     public ImageIcon getImage(){
         
-        img = new ImageIcon("src/Recursos/"+this.getNumero()+".jpg");
+        img = new ImageIcon("img/"+this.getNumero()+".jpg");
         return img;
     }
 }

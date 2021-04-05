@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Clases;
 
 import java.awt.Color;
@@ -444,11 +440,11 @@ public class Principal extends javax.swing.JFrame {
  public void iniciar(){
         
         if(jRD1.isSelected()){
-            rutaDorso="src/Recursos/dorso.jpg";
+            rutaDorso="img/dorso.jpg";
         } else if (jRD2.isSelected()){
-            rutaDorso="src/Recursos/dorso1.jpg";
+            rutaDorso="img/dorso1.jpg";
         } else if (jRD3.isSelected()){
-             rutaDorso="src/Recursos/dorso2.jpg"; 
+             rutaDorso="img/dorso2.jpg"; 
         }
         
         
@@ -473,24 +469,13 @@ public class Principal extends javax.swing.JFrame {
             Carta ca = baraja.antCarta();
             c.getAudio().play();
              
-//            jLabImagen.setIcon(
-//                    c.getImage());
- this.jLabImagen.setIcon( Imagenes.escalarImagen(c.getImage(), 
-                        this.jLabImagen.getWidth(), 
-                        this.jLabImagen.getHeight())
-        );
- 
-  this.jLabPequeña.setIcon( Imagenes.escalarImagen(ca.getImage(), 
-                        this.jLabPequeña.getWidth(), 
-                        this.jLabPequeña.getHeight())
-        );
 
-//            ImageIcon pequeña = ca.getImage();
-//
-//            jLabPequeña.setIcon(new ImageIcon(pequeña.getImage().getScaledInstance(jLabPequeña.getWidth(),
-//                    jLabPequeña.getHeight(), Image.SCALE_SMOOTH)));
-            
+            this.jLabImagen.setIcon( Imagenes.escalarImagen(c.getImage(),this.jLabImagen.getWidth(),this.jLabImagen.getHeight()));
+ 
+            this.jLabPequeña.setIcon( Imagenes.escalarImagen(ca.getImage(),this.jLabPequeña.getWidth(),this.jLabPequeña.getHeight()));
+
         } catch (Exception ex) {
+            ex.toString();
 
         }
         count++;
